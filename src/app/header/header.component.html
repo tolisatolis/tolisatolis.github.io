@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar for mobile view -->
+  <mat-sidenav #sidenav mode="side" [(opened)]="isSidebarOpen" [fixedInViewport]="true" class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/about-me" (click)="sidenav.close()">About Me</a>
+      <a mat-list-item routerLink="/contact-info" (click)="sidenav.close()">Contact Info</a>
+      <a mat-list-item routerLink="/education" (click)="sidenav.close()">Education</a>
+      <a mat-list-item routerLink="/skills" (click)="sidenav.close()">Skills</a>
+      <a mat-list-item routerLink="/experience" (click)="sidenav.close()">Experience</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- Toolbar for larger screens -->
+    <mat-toolbar color="primary" class="toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title" >Agrafas Apostolis </span>
+      <span class="spacer"></span>
+      <div class="toolbar-links" *ngIf="!isMobile">
+        <a id="about-me" mat-button routerLink="/about-me">About Me</a>
+        <a id="contact-info" mat-button routerLink="/contact-info">Contact Info</a>
+        <a id="education" mat-button routerLink="/education">Education</a>
+        <a id="skills" mat-button routerLink="/skills">Skills</a>
+        <a id="experience" mat-button routerLink="/experience">Experience</a>
+      </div>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
