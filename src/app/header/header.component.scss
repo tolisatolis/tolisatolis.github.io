@@ -76,7 +76,7 @@ mat-nav-list {
   color: black;
   a {
     text-decoration: none; /* Remove underline */
-  }
+    }
 }
 
 mat-toolbar button {
@@ -102,6 +102,27 @@ mat-toolbar button {
   letter-spacing: 0.5px; /* Slight letter spacing */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+}
+.download-button {
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  padding: 12px 24px; /* Add padding for better spacing */
+  border-radius: 14px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  font-weight: 500; /* Slightly lighter bold text */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Slight letter spacing */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.download-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  color: #fff; /* Text color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Hover effect */
