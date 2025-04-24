@@ -7,12 +7,12 @@ import { SkillsComponent } from "./skills/skills.component";
 import { ExperienceComponent } from "./experience/experience.component";
 
 export const routes: Routes = [
+  { path: "", redirectTo: "/about-me", pathMatch: "full" },
   { path: "about-me", component: AboutMeComponent },
   { path: "contact-info", component: ContactInfoComponent },
   { path: "education", component: EducationComponent },
   { path: "skills", component: SkillsComponent },
   { path: "experience", component: ExperienceComponent },
-  { path: "", redirectTo: "/about-me", pathMatch: "full" },
 ];
 
 @NgModule({
